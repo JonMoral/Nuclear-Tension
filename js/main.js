@@ -1,6 +1,6 @@
 var InfiniteScroller = InfiniteScroller || {};
 
-InfiniteScroller.game = new Phaser.Game(400, 700, Phaser.CANVAS, '');
+InfiniteScroller.game = new Phaser.Game(376, 667, Phaser.CANVAS, '');
 
 InfiniteScroller.game.state.add('Boot', InfiniteScroller.Boot);
 InfiniteScroller.game.state.add('Preload', InfiniteScroller.Preload);

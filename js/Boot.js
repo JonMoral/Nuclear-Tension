@@ -23,7 +23,7 @@ InfiniteScroller.Boot.prototype = {
   
 
     //the game will have a sky blue background
-    this.game.stage.backgroundColor = '#D8DAD6';
+    this.game.stage.backgroundColor = '#FFFFFF';
 
     //scaling options
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;

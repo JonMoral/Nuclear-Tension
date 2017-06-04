@@ -36,6 +36,7 @@ InfiniteScroller.Preload.prototype = {
  //-----------------------------------
 //------------Other assets--------------------------------------
 //-----------------------------------
+  this.load.image('background', 'assets/img/background1.png');
     this.load.image('yesBtn', 'assets/img/yesBtn.png');
     this.load.image('noBtn', 'assets/img/noBtn.png');
 
