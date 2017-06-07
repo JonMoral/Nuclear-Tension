@@ -41,6 +41,21 @@ InfiniteScroller.Preload.prototype = {
     this.load.image('noBtn', 'assets/img/noBtn.png');
 
     this.load.image('ground', 'assets/img/ground.png');
+//hearts
+    this.load.image('heart3', 'assets/img/hearts_3.png');
+    this.load.image('heart2', 'assets/img/hearts_2.png');
+    this.load.image('heart1', 'assets/img/hearts_1.png');
+    this.load.image('heart0', 'assets/img/hearts_death.png');
+//health bar
+this.load.image('healthBar1', 'assets/img/health_bar_1.png');
+this.load.image('healthBar2', 'assets/img/health_bar_2.png');
+this.load.image('healthBar3', 'assets/img/health_bar_3.png');
+this.load.image('healthBar4', 'assets/img/health_bar_4.png');
+this.load.image('healthBar5', 'assets/img/health_bar_5.png');
+this.load.image('healthBar6', 'assets/img/health_bar_6.png');
+this.load.image('healthBar7', 'assets/img/health_bar_7.png');
+this.load.image('healthBar8', 'assets/img/health_bar_8.png');
+this.load.image('healthBar9', 'assets/img/health_bar_9.png');
 
     // load audio
     this.load.audio('dead', ['assets/audio/dead.mp3']);

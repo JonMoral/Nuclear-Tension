@@ -15,6 +15,7 @@ this.text = 0;
     this.chinaPoints = 3;
      this.skPoints = 3;
      this.nkPoints = 3;
+      this.weekPoints = 10;
     this.cardCenter = true
 
     //set up background and ground layer
@@ -22,13 +23,98 @@ this.text = 0;
 
 
 //-------------Yes and No Buttons--------------------------------------
-    this.yesBtn = this.game.add.sprite(this.game.width/2 + 60, this.game.height/2 + 170, 'yesBtn');
-    this.yesBtn.scale.setTo(.37, .37);
+    this.yesBtn = this.game.add.sprite(this.game.width/2 + 40, this.game.height/2 + 170, 'yesBtn');
+    this.yesBtn.scale.setTo(.4, .4);
     this.yesBtn.inputEnabled = true;
 
-    this.noBtn = this.game.add.sprite(this.game.width/2 - 123, this.game.height/2 + 170, 'noBtn');
-    this.noBtn.scale.setTo(.37, .37);
-    this.noBtn.inputEnabled = true;
+    this.noBtn = this.game.add.sprite(this.game.width/2 - 110, this.game.height/2 + 170, 'noBtn');
+    this.noBtn.scale.setTo(.4, .4);
+    this.noBtn.inputEnabled = true
+//-------------NK Hearts--------------------------------------
+    this.heart3_1 = this.game.add.sprite(this.game.width/2 - 153, this.game.height/2 - 230, 'heart3');
+    this.heart3_1.scale.setTo(.37, .37);
+    this.heart3_1.alpha = 1
+
+    this.heart2_1 = this.game.add.sprite(this.game.width/2 - 153, this.game.height/2 - 230, 'heart2');
+    this.heart2_1.scale.setTo(.37, .37);
+    this.heart2_1.alpha = 0
+
+    this.heart1_1 = this.game.add.sprite(this.game.width/2 - 153, this.game.height/2 - 230, 'heart1');
+    this.heart1_1.scale.setTo(.37, .37);
+    this.heart1_1.alpha = 0
+
+    this.heart1_0 = this.game.add.sprite(this.game.width/2 - 153, this.game.height/2 - 230, 'heart0');
+    this.heart1_0.scale.setTo(.37, .37);
+    this.heart1_0.alpha = 0
+//-------------China Hearts--------------------------------------    
+    this.heart3_2 = this.game.add.sprite(this.game.width/2 - 35, this.game.height/2 - 230, 'heart3');
+    this.heart3_2.scale.setTo(.37, .37);
+    this.heart3_2.alpha = 1
+
+    this.heart2_2 = this.game.add.sprite(this.game.width/2 - 35, this.game.height/2 - 230, 'heart2');
+    this.heart2_2.scale.setTo(.37, .37);
+    this.heart2_2.alpha = 0
+
+    this.heart1_2 = this.game.add.sprite(this.game.width/2 - 35, this.game.height/2 - 230, 'heart1');
+    this.heart1_2.scale.setTo(.37, .37);
+    this.heart1_2.alpha = 0
+
+    this.heart0_2 = this.game.add.sprite(this.game.width/2 - 35, this.game.height/2 - 230, 'heart0');
+    this.heart0_2.scale.setTo(.37, .37);
+    this.heart0_2.alpha = 0    
+
+//-------------SK Hearts--------------------------------------    
+    this.heart3_3 = this.game.add.sprite(this.game.width/2 + 90, this.game.height/2 - 230, 'heart3');
+    this.heart3_3.scale.setTo(.37, .37);
+    this.heart3_3.alpha = 1
+
+    this.heart2_3 = this.game.add.sprite(this.game.width/2 + 90, this.game.height/2 - 230, 'heart2');
+    this.heart2_3.scale.setTo(.37, .37);
+    this.heart2_3.alpha = 0
+
+    this.heart1_3 = this.game.add.sprite(this.game.width/2 + 90, this.game.height/2 - 230, 'heart1');
+    this.heart1_3.scale.setTo(.37, .37);
+    this.heart1_3.alpha = 0
+
+    this.heart0_3 = this.game.add.sprite(this.game.width/2 + 90, this.game.height/2 - 230, 'heart0');
+    this.heart0_3.scale.setTo(.37, .37);
+    this.heart0_3.alpha = 0
+//-------------Health Bar--------------------------------------    
+    this.healthBar1 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar1');
+    this.healthBar1.scale.setTo(.32, .32);
+    this.healthBar1.alpha =1
+
+    this.healthBar2 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar2');
+    this.healthBar2.scale.setTo(.32, .32);
+    this.healthBar2.alpha =0
+
+    this.healthBar3 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar3');
+    this.healthBar3.scale.setTo(.32, .32);
+    this.healthBar3.alpha =0 
+
+    this.healthBar4 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar4');
+    this.healthBar4.scale.setTo(.32, .32);
+    this.healthBar4.alpha =0 
+
+    this.healthBar5 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar5');
+    this.healthBar5.scale.setTo(.32, .32);
+    this.healthBar5.alpha =0 
+
+    this.healthBar6 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar6');
+    this.healthBar6.scale.setTo(.32, .32);
+    this.healthBar6.alpha =0 
+
+    this.healthBar7 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar7');
+    this.healthBar7.scale.setTo(.32, .32);
+    this.healthBar7.alpha =0 
+
+    this.healthBar8 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar8');
+    this.healthBar8.scale.setTo(.32, .32);
+    this.healthBar8.alpha =0 
+
+    this.healthBar9 = this.game.add.sprite(this.game.width/2 - 170, this.game.height/2 + 260, 'healthBar9');
+    this.healthBar9.scale.setTo(.32, .32);
+    this.healthBar9.alpha =0 
 
     
 //-----------------------------------
@@ -81,12 +167,13 @@ this.text = 0;
 //-----------------------------------
 //-------------Timer Text--------------------------------------
 //-----------------------------------
-   this.text = this.game.add.text(this.game.world.centerX - 90, this.game.world.centerY + 105, '15', { font: "40px Arial", fill: "#FFFFFF", align: "center" });
+   this.text = this.game.add.text(this.game.world.centerX + 1 , this.game.world.centerY + 123, '15', { font: "33px Arial", fill: "#FFFFFF", align: "center" });
    this.text.anchor.setTo(0.5, 0.5);
    this.game.time.events.loop(Phaser.Timer.SECOND, this.updateCounter, this);
+
  
 
-//-----------------------------------
+//-------------------------------------
 //-------------Load Sounds--------------------------------------
 //-----------------------------------
     this.deadSound = this.game.add.audio('dead');
@@ -98,10 +185,10 @@ this.text = 0;
 //-----------------------------------
 //-------------load score text and game over text and retry--------------------------------------
 //-----------------------------------
-    var style2 = { font: "40px Arial", fill: "#222222"};
-    this.nkPointsText = this.game.add.text(this.game.width / 2 - 160 , this.game.height / 2 - 230, "", style2);
-    this.chinaPointsText = this.game.add.text(this.game.width / 2 , this.game.height / 2 - 230, "", style2);
-    this.skPointsText = this.game.add.text(this.game.width / 2 + 110 , this.game.height / 2 - 230, "", style2);
+   var style2 = { font: "40px Arial", fill: "#222222"};
+    this.weekPointsText = this.game.add.text(this.game.width / 2 - 1175 , this.game.height / 2 + 258, "10", style2);
+    //this.chinaPointsText = this.game.add.text(this.game.width / 2 , this.game.height / 2 - 230, "", style2);
+    //this.skPointsText = this.game.add.text(this.game.width / 2 + 110 , this.game.height / 2 - 230, "", style2);
 
     //var style3 = { font: "20px Arial", fill: "#222222"};
     //this.chinaText = this.game.add.text(this.game.width / 2 - 170 , this.game.height / 2 - 320, "China", style3);
@@ -147,7 +234,8 @@ if (this.card1.x == this.game.width/2 - 143   ){
 this.card1.x = this.game.width/2 - 500
 this.card2.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints -1;
-this.nkPointsText.text = this.nkPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
    this.counter = 16;
 
   }
@@ -156,7 +244,10 @@ this.nkPointsText.text = this.nkPoints;
 this.card2.x = this.game.width/2 - 500
 this.card3.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints -1;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 16;
   }
 //Card 3 YES 
@@ -164,9 +255,12 @@ this.counter = 16;
 this.card3.x = this.game.width/2 - 500
 this.card4.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints -1;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.skPoints = 3;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 16        ;
 
   } 
@@ -175,11 +269,14 @@ this.counter = 16        ;
 this.card4.x = this.game.width/2 - 500
 this.card5.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints -1;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.chinaPoints = this.chinaPoints - 1;
-this.chinaPointsText.text = this.chinaPoints;
+//this.chinaPointsText.text = this.chinaPoints;
 this.skPoints = 3;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   } 
   //Card 5 YES 
@@ -187,11 +284,14 @@ this.counter = 11;
 this.card5.x = this.game.width/2 - 500
 this.card6.x = this.game.width/2 - 143
 this.nkPoints = 0;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.chinaPoints = this.chinaPoints - 1;
-this.chinaPointsText.text = this.chinaPoints;
+//this.chinaPointsText.text = this.chinaPoints;
 this.skPoints = 3;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   } 
   //Card 6 YES 
@@ -199,9 +299,12 @@ this.counter = 11;
 this.card6.x = this.game.width/2 - 500
 this.card7.x = this.game.width/2 - 143
 this.nkPoints = 2;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.skPoints = this.skPoints - 1;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   }
   //Card 7 YES 
@@ -209,9 +312,12 @@ this.counter = 11;
 this.card7.x = this.game.width/2 - 500
 this.card8.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints - 1;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.skPoints = this.skPoints - 1;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   }
   //Card 8 YES 
@@ -219,9 +325,12 @@ this.counter = 11;
 this.card8.x = this.game.width/2 - 500
 this.card9.x = this.game.width/2 - 143
 this.nkPoints = this.nkPoints - 1;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.skPoints = 3;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 9;
   }
   //Card 9    YES 
@@ -229,9 +338,12 @@ this.counter = 9;
 this.card9.x = this.game.width/2 - 500
 this.card10.x = this.game.width/2 - 143
 this.skPoints = 3;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
 this.chinaPoints = this.chinaPoints - 1;
-this.chinaPointsText.text = this.chinaPoints;     
+//this.chinaPointsText.text = this.chinaPoints;  
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.gameOver();
   }              
 },
@@ -246,7 +358,10 @@ if (this.card1.x == this.game.width/2 - 143   ){
 this.card1.x = this.game.width/2 - 500
 this.card2.x = this.game.width/2 - 143
 this.skPoints = this.skPoints - 1;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 16;
 
   }
@@ -255,9 +370,12 @@ this.counter = 16;
 this.card2.x = this.game.width/2 - 500
 this.card3.x = this.game.width/2 - 143
 this.skPoints = this.skPoints -1 ;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
 this.nkPoints = 3 ;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 
 this.counter = 16;
 
@@ -267,7 +385,10 @@ this.counter = 16;
 this.card3.x = this.game.width/2 - 500
 this.card4.x = this.game.width/2 - 143
 this.skPoints = this.skPoints -1 ;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 16;
   } 
   //Card 4 NO
@@ -275,7 +396,10 @@ this.counter = 16;
 this.card4.x = this.game.width/2 - 500
 this.card5.x = this.game.width/2 - 143
 this.skPoints = this.skPoints -1 ;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;         
   } 
   //Card 5 NO
@@ -283,7 +407,10 @@ this.counter = 11;
 this.card5.x = this.game.width/2 - 500
 this.card6.x = this.game.width/2 - 143
 this.skPoints = this.skPoints -1 ;
-this.skPointsText.text = this.skPoints;  
+//this.skPointsText.text = this.skPoints;  
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;       
 
   } 
@@ -292,11 +419,14 @@ this.counter = 11;
 this.card6.x = this.game.width/2 - 500
 this.card7.x = this.game.width/2 - 143
 this.skPoints = 2 ;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
 this.nkPoints = this.nkPoints - 1 ;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.chinaPoints = this.chinaPoints -1 ;
-this.chinaPointsText.text = this.chinaPoints;
+//this.chinaPointsText.text = this.chinaPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   }
   //Card 7 NO
@@ -304,7 +434,10 @@ this.counter = 11;
 this.card7.x = this.game.width/2 - 500
 this.card8.x = this.game.width/2 - 143
 this.nkPoints = 3 ;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 11;
   }
   //Card 8 NO
@@ -312,9 +445,12 @@ this.counter = 11;
 this.card8.x = this.game.width/2 - 500
 this.card9.x = this.game.width/2 - 143
 this.chinaPoints = this.chinaPoints -1 ;
-this.chinaPointsText.text = this.chinaPoints;
+//this.chinaPointsText.text = this.chinaPoints;
 this.skPoints = this.skPoints - 1 ;
-this.skPointsText.text = this.skPoints;
+//this.skPointsText.text = this.skPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.counter = 9;
 
   }
@@ -323,9 +459,12 @@ this.counter = 9;
 this.card9.x = this.game.width/2 - 500
 this.card10.x = this.game.width/2 - 143
 this.nkPoints = 2 ;
-this.nkPointsText.text = this.nkPoints;
+//this.nkPointsText.text = this.nkPoints;
 this.chinaPoints = 3;
-this.chinaPointsText.text = this.chinaPoints;
+//this.chinaPointsText.text = this.chinaPoints;
+this.weekPoints = this.weekPoints -1;
+this.weekPointsText.text = this.weekPoints;
+
 this.gameOver();
 
   }  
@@ -359,6 +498,12 @@ if (this.counter == 0 ){
    this.GameOverText.x = this.game.width / 2 - 160
    this.retryText.x = this.game.width / 2 - 90
    this.counter = 0;
+  this.heart3_2.alpha = 0
+  this.heart2_2.alpha = 0
+  this.heart1_2.alpha = 0
+  this.heart0_2.alpha = 1
+  this.heart0_3.alpha = 1
+  this.heart1_0.alpha = 1
 
 }
 
@@ -370,6 +515,12 @@ if (this.counter == 0 ){
    this.GameOverText.x = this.game.width / 2 - 160
    this.retryText.x = this.game.width / 2 - 90
    this.counter = 0;
+  this.heart3_3.alpha = 0
+  this.heart2_3.alpha = 0
+  this.heart1_3.alpha = 0
+  this.heart0_2.alpha = 1
+  this.heart0_3.alpha = 1
+  this.heart1_0.alpha = 1
 
 }
 
@@ -381,20 +532,104 @@ if (this.counter == 0 ){
    this.GameOverText.x = this.game.width / 2 - 160
    this.retryText.x = this.game.width / 2 - 90
    this.counter = 0;
+  this.heart3_1.alpha = 0
+  this.heart2_1.alpha = 0
+  this.heart1_1.alpha = 0
+  this.heart0_2.alpha = 1
+  this.heart0_3.alpha = 1
+  this.heart1_0.alpha = 1
 
 }
      
+ if (this.nkPoints == 3 ) {
+  this.heart3_1.alpha = 1
+  this.heart2_1.alpha = 0
+  this.heart1_1.alpha = 0
+}   
+ if (this.nkPoints == 2 ) {
+  this.heart3_1.alpha = 0
+  this.heart2_1.alpha = 1
+  this.heart1_1.alpha = 0
+}    
+ if (this.nkPoints == 1 ) {
+  this.heart3_1.alpha = 0
+  this.heart2_1.alpha = 0
+  this.heart1_1.alpha = 1
+}   
+     
+ if (this.chinaPoints == 3 ) {
+  this.heart3_2.alpha = 1
+  this.heart2_2.alpha = 0
+  this.heart1_2.alpha = 0
+}   
+ if (this.chinaPoints == 2 ) {
+  this.heart3_2.alpha = 0
+  this.heart2_2.alpha = 1
+  this.heart1_2.alpha = 0
+}    
+ if (this.chinaPoints == 1 ) {
+  this.heart3_2.alpha = 0
+  this.heart2_2.alpha = 0
+  this.heart1_2.alpha = 1
+}  
+ if (this.skPoints == 3 ) {
+  this.heart3_3.alpha = 1
+  this.heart2_3.alpha = 0
+  this.heart1_3.alpha = 0
+}   
+ if (this.skPoints == 2 ) {
+  this.heart3_3.alpha = 0
+  this.heart2_3.alpha = 1
+  this.heart1_3.alpha = 0
+}    
+ if (this.skPoints == 1 ) {
+  this.heart3_3.alpha = 0
+  this.heart2_3.alpha = 0
+  this.heart1_3.alpha = 1
+}  
+ if (this.weekPoints == 9 ) {
+this.healthBar2.alpha =1
+}  
+ if (this.weekPoints == 8 ) {
+this.healthBar3.alpha =1
+}  
+ if (this.weekPoints == 7 ) {
+this.healthBar4.alpha =1
+}  
+ if (this.weekPoints == 6 ) {
+this.healthBar5.alpha =1
+}  
+ if (this.weekPoints == 5 ) {
+this.healthBar6.alpha =1
+}  
+ if (this.weekPoints == 4 ) {
+this.healthBar7.alpha =1
+}  
+ if (this.weekPoints == 3 ) {
+this.healthBar8.alpha =1
+}  
+ if (this.weekPoints == 2 ) {
+this.healthBar9.alpha =1
+}  
 
 
+
+
+
+
+
+
+
+    
 
   },
 //-----------------------------------
 //-------------shows original updated values--------------------------------------
 //-----------------------------------
   refreshStats: function() {
-    this.chinaPointsText.text = this.chinaPoints;
-    this.skPointsText.text = this.skPoints;
-    this.nkPointsText.text = this.nkPoints;
+    //this.chinaPointsText.text = this.chinaPoints;
+    //this.skPointsText.text = this.skPoints;
+    //this.nkPointsText.text = this.nkPoints;
 
     
   },
