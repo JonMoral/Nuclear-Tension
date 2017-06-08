@@ -58,6 +58,9 @@ this.load.image('healthBar8', 'assets/img/health_bar_8.png');
 this.load.image('healthBar9', 'assets/img/health_bar_9.png');
 
     // load audio
+    // Title Screen Music, currently plays during game play
+    this.load.audio('titlemusic', ['assets/audio/NuclearTensionTheme2.ogg']);
+    
     this.load.audio('dead', ['assets/audio/dead.mp3']);
 
     this.load.audio('music', ['assets/audio/Music1.mp3']);
@@ -80,6 +83,12 @@ this.load.image('healthBar9', 'assets/img/health_bar_9.png');
 
 
     //start the game
-    this.state.start('Game');
+    //this.state.start('Game');
+  },
+  update: function(){
+    // Wait until sound has finished decoding in order to begin the game state
+    if(this.cache.isSoundDecoded('titlemusic')) {
+        this.state.start('Game');
+    }
   }
 };
