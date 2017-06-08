@@ -178,8 +178,13 @@ this.text = 0;
 //-----------------------------------
     this.deadSound = this.game.add.audio('dead');
     this.pickupSound = this.game.add.audio('pickup');
-
-
+    
+    // Title Music Initialization
+    this.titlemusic = this.game.add.audio('titlemusic');
+    // Loop the title music
+    this.titlemusic.play('', 0, 0.75, true);
+    // Restart music to not overlay tracks when player restarts the game
+    this.titlemusic.restart();
 
 
 //-----------------------------------
@@ -612,12 +617,13 @@ this.healthBar8.alpha =1
 this.healthBar9.alpha =1
 }  
 
-
-
-
-
-
-
+  
+// Make Sure Looping for Music happens since there is an issue with the looping in .play()
+if(!this.titlemusic.isPlaying){
+  this.titlemusic.play('',0, 0.75, true);
+  // Six second fade in
+  this.titlemusic.fadeIn(6000);
+} 
 
 
     
@@ -642,6 +648,8 @@ this.healthBar9.alpha =1
   this.deadSound.play();
   this.card1.anchor.x += 10;   
 
+  //pause music before restart
+  this.titlemusic.pause();
   },
 
   //card1 is collecting Stars
@@ -653,6 +661,9 @@ this.healthBar9.alpha =1
 
   },
   gameOver: function() {
+    //pause music before restart
+    this.titlemusic.pause();
+    
     this.game.state.start('Game');
   },
   
